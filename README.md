@@ -1,5 +1,5 @@
-# Generateur-de-contrats-de-maintenance-PDF
-Générateur de contrat de maintenance de climatisation en PDF
+# PDF-maintenance-contract-generator
+Air conditioning maintenance contract generator in PDF
 
 Creation of a PDF contract generator for an air conditioning repair and maintenance company
 
