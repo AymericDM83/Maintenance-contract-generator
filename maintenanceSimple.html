@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil contrat de maintenance CAS</title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/2606507_5846.svg" alt="logo">
+            </a>
+        </div>
+        <div class="title">
+            <a href="./index.html">
+
+                <h1>Contrat de maintenance formule simple</h1>
+            </a>
+        </div>
+        <div class="itemToFlex"></div>
+    </header>
+    <!--  -->
+
+    <!-- Section 1 - Formulaire  -->
+    <section class="sectionFormulaire">
+
+        <div class="formulaireInfosClient formBlock">
+            <h2>Informations Client</h2>
+            <div class="blockInfosClient formContainer">
+                <form action="#">
+                    <!-- Nom & Prénom -->
+                    <div class="rowInfosClient formRow">
+
+                        <div class="itemInfosClient formItem">
+                            <label for="firstNameInput">Nom</label>
+                            <input type="text" class="formInput" id="firstNameInput">
+                        </div>
+
+                        <div class="itemInfosClient formItem">
+                            <label for="secondNameInput">Prénom</label>
+                            <input type="text" class="formInput" id="secondNameInput">
+                        </div>
+
+                        <div class="itemInfosClient formItem">
+                            <label for="telInput">Tél</label>
+                            <input type="text" class="formInput" id="telInput">
+                        </div>
+
+                        <div class="itemInfosClient formItem">
+                            <label for="mailInput">Mail</label>
+                            <input type="text" class="formInput" id="mailInput">
+                        </div>
+
+                    </div>
+                    <!-- Téléphone & email -->
+                    <div class="rowInfosClient formRow">
+
+
+
+                    </div>
+                    <!-- Adresse -->
+                    <div class="rowInfosClient formRow ">
+
+                        <div class="itemInfosClient formItem" id="adressLabel">
+                            <label for="adresseInput">Adresse</label>
+                            <input type="text" class="formInput" id="adresseInput">
+                        </div>
+
+                        <div class="itemInfosClient formItem">
+                            <label for="codepostalInput">Code postal</label>
+                            <input type="text" class="formInput" id="codepostalInput">
+                        </div>
+
+                        <div class="itemInfosClient formItem">
+                            <label for="villeInput">Ville</label>
+                            <input type="text" class="formInput" id="villeInput">
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="formulaireInfosInstallation formBlock">
+            <h2>Informations Installation</h2>
+            <div class="blockInfosInstallation formContainer">
+                <form action="#">
+                    <!-- Type de système & détails installation -->
+                    <div class="rowInfosInstallation formRow">
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="typeSystemeInput">Type de système</label>
+                            <select class="formSelect" id="typeSystemeInput">
+                                <!-- Choix des types de système en JS içi -->
+                            </select>
+                        </div>
+
+                        <div class="itemInfosInstallation formItem">
+                            <label>Tarif général</label>
+                            <div class="systemePriceInput">
+                                <p class="systemePriceContainer">125 €</p>
+                            </div>
+                        </div>
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="marqueInput">Marque</label>
+                            <input type="text" class="formInput" id="marqueInput">
+                        </div>
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="refInput">Référence</label>
+                            <input type="text" class="formInput" id="refInput">
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Type de fluide & Charge initiale -->
+                    <div class="rowInfosInstallation formRow">
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="fluideSelect">Type de fluide</label>
+                            <select name="fluideSelect" id="fluideSelect">
+                                <option value="R407C">R407C</option>
+                                <option value="R410A">R410A</option>
+                                <option value="R32">R32</option>
+                            </select>
+                        </div>
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="chargeInput">Charge initiale</label>
+                            <input type="text" class="formInput" id="chargeInput">
+                        </div>
+
+                        <div class="itemInfosInstallation formItem">
+                            <label for="dateInstallationInput">Date de l'installation</label>
+                            <input type="date" class="formInput" id="dateInstallationInput">
+                        </div>
+
+                    </div>
+                    <!-- Date d'installation d'origine -->
+                    <div class="rowInfosInstallation formRow">
+                        <div class="itemInfosInstallation formItem">
+                            <label for="detailsInstallationInput">Détails sur l'installation</label>
+                            <textarea name="detailsInstallationInput" id="detailsInstallationInput" cols="105"
+                                rows="3"></textarea>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="formulaireInfosContrat formBlock">
+            <div class="blockInfosContrat">
+                <h2>Informations Contrat et Options</h2>
+                <div class="blockInfosInstallation formContainer">
+                    <form action="#">
+                        <!-- Dates du contrat & Choix TVA -->
+                        <div class="rowInfosContrat formRow">
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="dateContratInput">Dates du contrat</label>
+                                <input type="text" class="formInput" id="dateContratInput">
+                            </div>
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="tvaSelect">Choix T.V.A</label>
+                                <select name="tvaSelect" id="tvaSelect">
+                                    <option value="0.05">5 %</option>
+                                    <option value="0.10">10 %</option>
+                                    <option value="0.20">20 %</option>
+                                </select>
+                            </div>
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="clauseInput">Clause particulière</label>
+                                <textarea name="clauseInput" id="clauseInput" cols="50" rows="3"></textarea>
+                            </div>
+
+                            <div class="itemInfosContrat formItem">
+                                <label>Nombre de visites</label>
+                                <input class="visitInput" type="number" min="1" value="1">
+                            </div>
+
+                        </div>
+
+                        <!-- Déplacement supp & tarif correspondant -->
+                        <div class="rowInfosContrat formRow">
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="deplacementSuppInput">Déplacement supplémentaire</label>
+                                <select class="form-control" id="deplacementSuppInput">
+                                    <!-- Choix des déplacements supplémentaire en JS içi -->
+                                </select>
+                            </div>
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="deplacementSuppInput">Tarif déplacement supplémentaire</label>
+                                <div class="deplacementSuppInput">
+                                    <p class="deplacementSuppPriceContainer">
+                                        <!-- Prix deplacement supp içi -->
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- Option supp & tarif correspondant -->
+                        <div class="rowInfosContrat formRow">
+
+                            <div class="itemInfosContrat formItem">
+                                <label for="optionSuppInput">Option supplémentaire</label>
+                                <select class="form-control" id="optionSuppInput">
+                                    <!-- Choix des options supplémentaires en JS içi -->
+                                </select>
+                            </div>
+
+                            <div class="itemInfosContrat formItem">
+                                <label>Tarif option supplémentaire</label>
+                                <div class="optionPriceInput">
+                                    <p class="optionSuppPriceContainer">
+                                        <!-- Prix option supp içi -->
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 2 GenerateBtn -->
+    <section class="sectionGenerateBtn">
+
+        <div class="generateBtn">
+            <p>Générer Contrat</p>
+        </div>
+
+        <div class="backBtn disappearItem">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+            <p>Retour</p>
+        </div>
+
+        <div class="downloadPdfBtn disappearItem">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <p>Télécharger le PDF</p>
+        </div>
+
+
+    </section>
+
+
+
+    <!-- Section 3 Pdf Container -->
+    <section class="sectionPDF disappearItem">
+        <div class="toPrint">
+
+            <div class="pdfPage1 pdfPage">
+
+                <div class="pdfHeader">
+                    <div class="pdfHeaderLogo">
+                        <img src="./images/2606507_5846.svg" alt="logo">
+                    </div>
+
+                    <div class="pdfHeaderDeco">
+                        <p class="firstTextHeader">Mise en route - Assistance - Maintenance</p>
+                        <p class="rotateSpanHeader">- Climatisation - Chauffage thermodynamique</p>
+                    </div>
+                </div>
+
+                <div class="pdfTitle">
+                    <h3>Contrat d'entretien chauffage et/ou climatisation</h3>
+                </div>
+
+                <div class="pdfInfos">
+
+                    <h3>Informations Client</h3>
+
+                    <div class="pdfInfosTopBlock">
+
+                        <div class="pdfInfosBlock pdfInfosBlockClient">
+                            <div class="pdfInfosItem">
+                                <p>Nom :</p>
+                                <p id="pdf_Nom_Input">
+                                    <!-- Nom  -->
+                                </p>
+                            </div>
+                            <div class="pdfInfosItem">
+                                <p>Prénom :</p>
+                                <p id="pdf_Prenom_Input">
+                                    <!-- Prénom -->
+                                </p>
+                            </div>
+                            <div class="pdfInfosItem">
+                                <p>Tél :</p>
+                                <p id="pdf_Tel_Input">
+                                    <!-- Tel -->
+                                </p>
+                            </div>
+                            <div class="pdfInfosItem">
+                                <p>Mail :</p>
+                                <p id="pdf_Mail_Input">
+                                    <!-- Mail -->
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pdfInfosBlock pdfInfosBlockAdresse">
+                            <div class="pdfInfosItem">
+                                <p>Adresse :</p>
+                                <p id="pdf_Adresse_Input">
+                                    <!-- Adresse -->
+                                </p>
+                            </div>
+                            <div class="pdfInfosItem">
+                                <!-- item for flexbox -->
+                            </div>
+                            <div class="pdfInfosItem">
+                                <p>Code postal :</p>
+                                <p id="pdf_Codepostal_Input">
+                                    <!-- Code postal -->
+                                </p>
+                            </div>
+                            <div class="pdfInfosItem">
+                                <p>Ville :</p>
+                                <p id="pdf_Ville_Input">
+                                    <!-- ville -->
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <h3>Informations Installation</h3>
+
+                    <div class="pdfInfosBlock">
+                        <div class="pdfInfosItem">
+                            <p>Type de système :</p>
+                            <p id="pdf_Systeme_Input">
+                                <!-- Type de système -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Détails :</p>
+                            <p id="pdf_Details_Installation_Input">
+                                <!-- Details install -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Marque :</p>
+                            <p id="pdf_Marque_Input">
+                                <!-- Marque -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Référence :</p>
+                            <p id="pdf_Ref_Input">
+                                <!-- Ref -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pdfInfosBlock">
+                        <div class="pdfInfosItem">
+                            <p>Type de fluide :</p>
+                            <p id="pdf_Fluide_Input">
+                                <!-- Fluide -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Charge initiale :</p>
+                            <p id="pdf_Charge_Input">
+                                <!-- Charge -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Date de l'installation :</p>
+                            <p id="pdf_Date_Installation_Input">
+                                <!-- Date install -->
+                            </p>
+                        </div>
+                        <div class="pdfInfosItem">
+                            <p>Nombre de visite :</p>
+                            <p id="pdf_Visites_Input">
+                                <!-- Visites -->
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pdfArray">
+                    <div class="div1">
+                        <h4>CONTRAT SIMPLE</h4>
+                        <h4>Prime annuelle H.T</h4>
+                    </div>
+                    <div class="div2">
+                        <h4>Durée du contrat</h4>
+                    </div>
+                    <div class="div3">
+                        <div class="pdfArrayRow">
+                            <p>Cas général</p>
+                            <p id="pdf_Prix_Systeme_Input">
+                                <!-- Prix systeme -->
+                            </p>
+                        </div>
+                        <div class="pdfArrayRow">
+                            <p>Déplacement supplémentaire</p>
+                            <p id="pdf_Deplacementsupp_Input">
+                                <!-- Ititulé deplacement supp -->
+                            </p>
+                            <p id="pdf_Prix_Deplacementsupp_Input">
+                                <!-- tarif deplacement supp -->
+                            </p>
+                        </div>
+                        <div class="pdfArrayRow">
+                            <p>Option supplémentaire</p>
+                            <p id="pdf_Optionsupp_Input">
+                                <!-- Intitulé option supp -->
+                            </p>
+                            <p id="pdf_Prix_Optionsupp_Input">
+                                <!-- Prix option supp -->
+                            </p>
+                        </div>
+                        <div class="pdfArrayRow">
+                            <p>Total H.T</p>
+                            <p id="pdf_Prix_Ht_Input">
+                                <!-- Prix HT -->
+                            </p>
+                        </div>
+                        <div class="pdfArrayRow">
+                            <p>T.V.A <span id="pdf_Taux_Tva_Input">
+                                    <!-- Taux de TVA -->
+                                </span></p>
+                            <p id="pdf_Prix_Tva_Input">
+                                <!-- Prix TVA -->
+                            </p>
+                        </div>
+                        <div class="pdfArrayRow gras">
+                            <p>Total T.T.C</p>
+                            <p id="pdf_Prix_Ttc_Input">
+                                <!-- total TTC -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="div4">
+                        <p id="pdf_Date_Contrat_Input">
+                            <!-- Dates du contrat -->
+                        </p>
+                        <h4>Clause particulière</h4>
+                        <p id="pdf_Clause_Input">
+                            <!-- Clause particulière -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pdfPiedDePage" id="footer1">
+
+                    <div class="block">
+                        <p class="gras">Entreprise de climatisation</p>
+                        <p>-</p>
+                        <p>234 Rue de lorem ipsum</p>
+                        <p>-</p>
+                        <p>00000 VILLE</p>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__group">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>: 04.XX.XX.XX.XX</p>
+                        </div>
+                        <div class="block__group">
+                            <p>Fax</p>
+                            <p>: 04.XX.XX.XX.XX</p>
+                        </div>
+                        <p>SAS au capital de XX 000 €</p>
+                        <p>RCS N°XXX XXX XXX</p>
+                        <p>TVA FRXX XXX XXX XXX</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="pdfPage2 pdfPage">
+                <div class="pdfHeader">
+                    <div class="pdfHeaderLogo">
+                        <img src="./images/2606507_5846.svg" alt="logo">
+                    </div>
+
+                    <div class="pdfHeaderDeco">
+                        <p class="firstTextHeader">Mise en route - Assistance - Maintenance</p>
+                        <p class="rotateSpanHeader">- Climatisation - Chauffage thermodynamique</p>
+                    </div>
+                </div>
+
+                <div class="pdfText">
+
+                    <h3>CAHIER DES CHARGES DU CONTRAT D'ENTRETIEN</h3>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 1</div>
+                        <div class="articletext underline">
+                            <p>Les obligations de l'entreprise naissent par le versement de la prime.</p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 2</div>
+                        <div class="articletext underline">
+                            <p>Le nombre de visite est fixé à la page précédente.</p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 3</div>
+                        <div class="articletext underline">
+                            <p>
+                                Le contrat prend effet dès réception de la prime et se renouvelle annuellement suivant
+                                la date de souscription par tacite reconduction, et sous réserve de la bonne réception
+                                de la prime pour la nouvelle année, s'il n'est pas dénoncé trois mois avant l'échéance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 4</div>
+                        <div class="articletext">
+                            <p>
+                                Clauses de propriété. Toute pièce fournie reste propriété de l’entreprise jusqu’à son
+                                paiement intégral.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 5</div>
+                        <div class="articletext">
+                            <p class="underline">
+                                Le contrat d’entretien garantie les prestations suivantes : </p>
+
+                            <p>Les opérations d’entretien sur les installations figurant page 1 programmés au gré de
+                                l’entreprise avec l’accord du souscripteur et comprenant : </p>
+
+
+                            <ul>
+                                <li>Une visite de révision générale et complète des installations figurant page 1
+                                    effectuée dans la période de validité du contrat.</li>
+                                <li>La vérification des circuits frigorifiques (unités intérieures et extérieures), et
+                                    contrôle de l’étanchéité suivant le règlement en vigueur (intervention annuelle
+                                    obligatoire à ce jour).</li>
+                                <li>La vérification des circuits frigorifiques (unités intérieures et extérieures), et
+                                    contrôle de l’étanchéité suivant le règlement en vigueur (intervention annuelle
+                                    obligatoire à ce jour).</li>
+                                <li>La fourniture des ingrédients nécessaires à l’entretien.</li>
+                                <li>Les tests de fonctionnement et les relevés de fonctionnement des installations
+                                    figurant page 1 à chaque visite.</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 6</div>
+                        <div class="articletext">
+                            <p class="underline">Le contrat d’entretien ne comprend pas : <br></p>
+                            <ul>
+                                <li>Les dépannages * pendant les jours et heures ouvrables, sur simple appel
+                                    téléphonique du CLIENT ou de son représentant au numéro de téléphone suivant : <span
+                                        class="gras">04 XX XX XX XX</span> ou Fax : <span class="gras">04 XX XX XX
+                                        XX</span> et en cas d’urgence au <span class="gras">06 XX XX XX XX</span> et à
+                                    intervenir dans un délai de 48 heures ouvrables maximum.</li>
+                            </ul>
+
+                            <p>Cette prestation s’entend hors pièces détachées et hors petites fournitures.</p>
+
+                            <ul>
+                                <li>La fourniture des fluides frigorigènes nécessaires au fonctionnement de
+                                    l’installation et aux opérations de maintenance qui seront facturées au tarif public
+                                    constructeur en vigueur (soit à ce jour pour le R32 47.00 € HT/kg et 95.50 € HT/kg
+                                    pour le R410A ou le R407C).</li>
+                                <li>Le remplacement des filtres des unités intérieures.</li>
+                                <li>Le remplacement des éventuelles pièces défectueuses hors garanti constructeur, qui
+                                    pourront être remplacées et facturées au tarif public constructeur en vigueur.</li>
+                                <li>La fournitures en remplacement ou la réparation *1 de toutes pièces et accessoires
+                                    usés ou cassés par la suite du fonctionnement et de l’usage normal des appareils
+                                    installés.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pdfPiedDePage" id="footer2">
+
+                        <div class="block">
+                            <p class="gras">Entreprise de climatisation</p>
+                            <p>-</p>
+                            <p>234 Rue de lorem ipsum</p>
+                            <p>-</p>
+                            <p>00000 VILLE</p>
+                        </div>
+
+                        <div class="block">
+                            <div class="block__group">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>: 04.XX.XX.XX.XX</p>
+                            </div>
+                            <div class="block__group">
+                                <p>Fax</p>
+                                <p>: 04.XX.XX.XX.XX</p>
+                            </div>
+                            <p>SAS au capital de XX 000 €</p>
+                            <p>RCS N°XXX XXX XXX</p>
+                            <p>TVA FRXX XXX XXX XXX</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="pdfPage3 pdfPage">
+
+                <div class="pdfHeader " id="pdfHeaderBreakPage">
+                    <div class="pdfHeaderLogo">
+                        <img src="./images/2606507_5846.svg" alt="logo">
+                    </div>
+
+                    <div class="pdfHeaderDeco">
+                        <p class="firstTextHeader">Mise en route - Assistance - Maintenance</p>
+                        <p class="rotateSpanHeader">- Climatisation - Chauffage thermodynamique</p>
+                    </div>
+                </div>
+
+                <div class="pdfText">
+                    <div class="articleAnnexe">
+                        <p>
+                            *1 : Les dépannages sont définis comme suit : L’entreprise s’engage également à effectuer
+                            sur les installations décrites page 1, 1 dépannage* (opération pouvant être effectuées par
+                            un seul technicien, permettant de localiser, sans outillage lourd, encombrant ou spécifique
+                            les causes des anomalies de fonctionnement, de les supprimer ou à défaut de prendre les
+                            mesures conservatoires utiles au fonctionnement normal des installations, compte tenu de
+                            l'état dans la mesure du possible).
+                        </p>
+                        <p>
+                            *1 : ne sont pas considéré comme dépannage mais comme visite spéciale : les pannes
+                            électriques ou mécanique causés par une défaillance sur réseau électrique (rupture du
+                            réseau,rupture de phases, surtension foudre, panne de groupe électrogène, etc …), rupture de
+                            canalisation, panne causée par un élément extérieur (incendie, inondation, percement, gel,
+                            travaux divers, gros travaux, etc …), les pannes des appareils eux-mêmes par défaut du
+                            matériel lui-même hors garantie constructeur. Cette prestation sera réalisée uniquement sur
+                            devis.
+                        </p>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 7</div>
+                        <div class="articletext">
+                            <p class="underline">
+                                Tout appel ayant entraîné un déplacement ou une prestation ne faisant pas partie du
+                                Contrat d’entretien sera facturé selon le tarif en vigueur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 8</div>
+                        <div class="articletext">
+                            <p>
+                                L’entreprise n’engage pas sa responsabilité pour les accidents matériels ou corporels,
+                                ni pour les interruptions de chauffage et leurs conséquences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 9</div>
+                        <div class="articletext">
+                            <p>
+                                Les appels en dépannage concernant le matériel objet du Contrat d’entretien donnent
+                                droit à nos interventions pour dépannage dans un délai de 48h ouvrables. Cependant nous
+                                ne serions êtres tenus pour responsables si un dépannage ne peut être fait pour des
+                                causes indépendantes de notre volonté.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 10</div>
+                        <div class="articletext">
+                            <p>
+                                Nos prix sont révisables annuellement, réajustés sans préavis en fonction de l’indice
+                                INSEE (coût du travail).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 11</div>
+                        <div class="articletext">
+                            <p>
+                                Dans le cas de modification des prestations, une nouvelle offre de Contrat d’entretien
+                                sera soumise à acceptation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="articleNb">Art. 12</div>
+                        <div class="articletext">
+                            <p>
+                                Si le client apporte des changements ou effectue des réparations ou des modifications
+                                sur le matériel désigné au contrat ou s’il en charge un tiers sans avoir reçu par écrit
+                                notre consentement, le Contrat d’entretien cesse immédiatement et notre responsabilité
+                                éventuelle s’en trouve dégagée.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article lastArticle">
+                        <p>
+                            Ce document comporte au total 3 pages. Il est établi en deux exemplaires originaux, dont
+                            chacune des parties à reçu un exemplaire.
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="pdfSignatures">
+                    <div class="blockSignature">
+                        <p class="gras">Le CLIENT</p>
+                        <p>Signature</p>
+                    </div>
+                    <div class="blockSignature">
+                        <p>Fait à </p>
+                        <p>Le </p>
+                    </div>
+                    <div class="blockSignature">
+                        <p class="gras">L'ENTREPRISE <br> Entreprise de climatisation <br> La région</p>
+                        <p>Signature et Cachet</p>
+                    </div>
+                </div>
+
+                <div class="pdfPiedDePage" id="footer3">
+
+                    <div class="block">
+                        <p class="gras">Entreprise de climatisation</p>
+                        <p>-</p>
+                        <p>234 Rue de lorem ipsum</p>
+                        <p>-</p>
+                        <p>00000 VILLE</p>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__group">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>: 04.XX.XX.XX.XX</p>
+                        </div>
+                        <div class="block__group">
+                            <p>Fax</p>
+                            <p>: 04.XX.XX.XX.XX</p>
+                        </div>
+                        <p>SAS au capital de XX 000 €</p>
+                        <p>RCS N°XXX XXX XXX</p>
+                        <p>TVA FRXX XXX XXX XXX</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/maintenanceSimple.js"></script>
+
+
+</body>
+
+</html>
